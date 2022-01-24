@@ -7,6 +7,7 @@ const Navbar = () => {
       id: 1,
       path: '/',
       text: 'Rockets',
+      exact: true,
     },
     {
       id: 2,
@@ -23,12 +24,12 @@ const Navbar = () => {
   return (
     <nav className="nav-bar">
       <div className="navbar-container">
-        <span className="brand-name">Spacehub</span>
+        <span className="brand-name">Space Traveler&apos;s Hub</span>
         <img src="planet.png" alt="brand logo" />
         <ul className="nav-links">
           {links.map((link) => (
             <li key={link.id}>
-              <NavLink to={link.path} activeClassName="active-link" exact>
+              <NavLink to={link.path} activeclassname="active-link" exact={`${link.path}`}>
                 {link.text}
               </NavLink>
             </li>
