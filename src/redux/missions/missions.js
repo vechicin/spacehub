@@ -1,35 +1,40 @@
-const JOIN_MISSION = 'JOIN_MISSION';
-const LEAVE_MISSION = 'LEAVE_MISSION';
+const TOGGLE_MISSION = 'spacehub/src/redux/missions/TOGGLE_MISSION';
+const FILTER_MISSION = 'spacehub/src/redux/missions/FILTER_MISSION';
 
 const initialState = {
-  joined_mission: false,
+  missions: [],
 };
 
-export const joinMission = (newMission) => (dispatch) => {
-  dispatch({
-    type: JOIN_MISSION,
-    payload: newMission, 
-  });
-};
+export const toggleMission = (payload) => ({
+  type: TOGGLE_MISSION,
+  payload,
+});
 
-export const leaveMission = (leaveMission) => (dispatch) => {
-  dispatch({
-    type: LEAVE_MISSION,
-    payload: leaveMission,
-  });
-};
+export const filterMission = () => ({
+  type: FILTER_MISSION,
+});
 
-const reducer = (state = initialState, action) => {
+const missions = (state = initialState, action) => {
   switch (action.type) {
-    case JOIN_MISSION:
-      return action.payload;
-    
-    case LEAVE_MISSION:
-      return action.payload;
+    case TOGGLE_MISSION:
+      return {
+        ...state,
+        missions: state.missions.map((mission) => {
+          if (mission.id === action.payload) {
+            return (
+              {
+                ...mission,
+                joined: !mission.joined,
+              }
+            );
+          }
+          return mission;
+        }),
+      };
 
     default:
       return state;
   }
 };
 
-export default reducer;
+export default missions;
