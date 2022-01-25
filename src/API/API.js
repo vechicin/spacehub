@@ -2,10 +2,6 @@ import axios from 'axios';
 
 const baseURL = 'https://api.spacexdata.com/v3/missions';
 
-// export const fetchMissions = async () => {
-//   axios.get(baseURL).then((response) =>)
-// };
+const fetchMissions = axios.get(baseURL);
 
-export const joinMissions = async () => {
-
-}
+export default fetchMissions;
