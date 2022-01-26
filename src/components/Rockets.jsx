@@ -25,6 +25,7 @@ const Rockets = () => {
           <li key={rocket.id}>
             <p>{rocket.name}</p>
             <p>{rocket.description}</p>
+            <img src={rocket.img} alt="rocket-img" />
             <button onClick={clickHandler} id={rocket.id} type="button">Reserve!</button>
           </li>
         ))}

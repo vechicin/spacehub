@@ -27,6 +27,7 @@ export const fetchRockets = () => async (dispatch) => {
       id: rocket.rocket_id,
       name: rocket.rocket_name,
       description: rocket.description,
+      img: rocket.flickr_images[0],
       reserved: false,
     };
     rockets.push(newRocket);
