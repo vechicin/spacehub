@@ -29,13 +29,13 @@ export const toggleReservation = (payload) => ({
 });
 
 const rocketsReducer = (state = initialState, action) => {
-  switch (action) {
+  switch (action.type) {
     case TOGGLE_RESERVATION:
       return {
         ...state,
         rockets: state.rockets.map((rocket) => {
           if (rocket.id === action.payload) {
-            return { ...rocket, reserved: !rocket.reserved };
+            return ({ ...rocket, reserved: !rocket.reserved });
           }
           return rocket;
         }),
