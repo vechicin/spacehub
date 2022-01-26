@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { toggleMission } from '../redux/missions/missions';
+import { toggleMission, fetchMission } from '../redux/missions/missions';
 
 const Missions = () => {
   const missions = useSelector((state) => state.missions.missions);
@@ -10,6 +10,12 @@ const Missions = () => {
     e.preventDefault();
     dispatch(toggleMission(e.target.id));
   };
+
+  useEffect(() => {
+    if (missions.length === 0) {
+      dispatch(fetchMission());
+    }
+  }, []);
 
   return (
     <div>

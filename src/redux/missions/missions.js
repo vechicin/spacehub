@@ -1,27 +1,31 @@
+import axios from 'axios';
+
 const TOGGLE_MISSION = 'spacehub/src/redux/missions/TOGGLE_MISSION';
 const FILTER_MISSION = 'spacehub/src/redux/missions/FILTER_MISSION';
+const FETCH_MISSION = 'spacehub/src/redux/missions/FETCH_MISSION';
+const baseURL = 'https://api.spacexdata.com/v3/missions';
 
 const initialState = {
-  missions: [
-    {
+  missions: [],
+};
+
+export const fetchMission = () => async (dispatch) => {
+  const response = (await axios.get(baseURL)).data;
+  const missions = [];
+  response.forEach((item) => {
+    const fetchedMission = {
+      id: item.mission_id,
+      name: item.mission_name,
+      description: item.description,
       joined: false,
-      name: 'Mission',
-      description: 'Mission description',
-      id: '1',
-    },
-    {
-      joined: false,
-      name: 'Mission 2',
-      description: 'Mission 2 description',
-      id: '2',
-    },
-    {
-      joined: false,
-      name: 'Mission 3',
-      description: 'Mission 3 description',
-      id: '3',
-    },
-  ],
+    };
+    missions.push(fetchedMission);
+  });
+
+  dispatch({
+    type: FETCH_MISSION,
+    payload: missions,
+  });
 };
 
 export const toggleMission = (payload) => ({
@@ -35,6 +39,12 @@ export const filterMission = () => ({
 
 const missions = (state = initialState, action) => {
   switch (action.type) {
+    case FETCH_MISSION:
+      return {
+        ...state,
+        missions: action.payload,
+      };
+
     case TOGGLE_MISSION:
       return {
         ...state,
