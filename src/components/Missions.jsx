@@ -6,6 +6,15 @@ const Missions = () => {
   const missions = useSelector((state) => state.missions.missions);
   const dispatch = useDispatch();
 
+  const buttonText = (reservation) => {
+    let text = 'Join Mission';
+    if (reservation === true) {
+      text = 'Leave Mission';
+      return text;
+    }
+    return text;
+  };
+
   const eventHandler = (e) => {
     e.preventDefault();
     dispatch(toggleMission(e.target.id));
@@ -35,7 +44,7 @@ const Missions = () => {
               <td>{mission.description}</td>
               <td>Not A Member</td>
               <td>
-                <button type="button" onClick={eventHandler} id={mission.id}>Join Mission</button>
+                <button type="button" onClick={eventHandler} id={mission.id}>{buttonText(mission.reserved)}</button>
               </td>
             </tr>
           ))}
