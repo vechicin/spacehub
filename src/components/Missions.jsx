@@ -8,7 +8,7 @@ const Missions = () => {
 
   const buttonText = (reservation) => {
     let text = 'Join Mission';
-    if (reservation === true) {
+    if (reservation) {
       text = 'Leave Mission';
       return text;
     }
@@ -17,7 +17,7 @@ const Missions = () => {
 
   const buttonColor = (reservation) => {
     let text = 'btn btn-success btn-sm';
-    if (reservation === true) {
+    if (reservation) {
       text = 'btn btn-danger btn-sm';
       return text;
     }
@@ -26,7 +26,7 @@ const Missions = () => {
 
   const badgeColor = (reservation) => {
     let text = 'badge bg-danger';
-    if (reservation === true) {
+    if (reservation) {
       text = 'badge bg-success';
       return text;
     }
@@ -35,7 +35,7 @@ const Missions = () => {
 
   const statusText = (reservation) => {
     let text = 'NOT A MEMBER';
-    if (reservation === true) {
+    if (reservation) {
       text = 'ACTIVE MEMBER';
       return text;
     }
