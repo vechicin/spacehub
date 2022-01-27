@@ -19,16 +19,26 @@ const Missions = () => {
 
   return (
     <div>
-      <h1>Missions!</h1>
-      <ul>
-        {missions.map((mission) => (
-          <li key={mission.id}>
-            <p>{mission.name}</p>
-            <p>{mission.description}</p>
-            <button type="button" onClick={eventHandler} id={mission.id}>Join Mission</button>
-          </li>
-        ))}
-      </ul>
+      <table>
+        <tr>
+          <th>Mission</th>
+          <th>Description</th>
+          <th>Status</th>
+          <th>Join</th>
+        </tr>
+        <tr>
+          {missions.map((mission) => (
+            <div key={mission.id}>
+              <td>{mission.name}</td>
+              <td>{mission.description}</td>
+              <td />
+              <td>
+                <button type="button" onClick={eventHandler} id={mission.id}>Join Mission</button>
+              </td>
+            </div>
+          ))}
+        </tr>
+      </table>
     </div>
   );
 };
