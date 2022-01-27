@@ -15,6 +15,15 @@ const Missions = () => {
     return text;
   };
 
+  const statusText = (reservation) => {
+    let text = 'NOT A MEMBER';
+    if (reservation === true) {
+      text = 'Active Member';
+      return text;
+    }
+    return text;
+  };
+
   const eventHandler = (e) => {
     e.preventDefault();
     dispatch(toggleMission(e.target.id));
@@ -42,7 +51,7 @@ const Missions = () => {
             <tr key={mission.id}>
               <td>{mission.name}</td>
               <td>{mission.description}</td>
-              <td>Not A Member</td>
+              <td>{statusText(mission.reserved)}</td>
               <td>
                 <button type="button" onClick={eventHandler} id={mission.id}>{buttonText(mission.reserved)}</button>
               </td>
