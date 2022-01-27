@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { toggleReservation } from '../redux/rockets/rocketsReducer';
+import { toggleReservation, fetchRockets } from '../redux/rockets/rocketsReducer';
 
 const Rockets = () => {
   const dispatch = useDispatch();
   const rockets = useSelector((state) => state.rockets.rockets);
+
+  useEffect(() => {
+    if (rockets.length === 0) {
+      dispatch(fetchRockets());
+    }
+  }, []);
 
   const clickHandler = (e) => {
     e.preventDefault();
@@ -19,6 +25,7 @@ const Rockets = () => {
           <li key={rocket.id}>
             <p>{rocket.name}</p>
             <p>{rocket.description}</p>
+            <img src={rocket.img} alt="rocket-img" />
             <button onClick={clickHandler} id={rocket.id} type="button">Reserve!</button>
           </li>
         ))}
