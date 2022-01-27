@@ -23,7 +23,7 @@ const Rocket = ({
       <div className="d-flex flex-column col-10 px-2">
         <h3>{name}</h3>
         <p>
-          {reserved && <span className="badge bg-info">Reserved</span>}
+          {reserved && <span className="badge bg-info me-2">Reserved</span>}
           <span>{description}</span>
         </p>
         <Button id={id} variant={`${buttonClass}`} onClick={handleClick} size="sm" className="reservation-btn">{buttonText}</Button>
