@@ -17,7 +17,7 @@ export const fetchMission = () => async (dispatch) => {
       id: item.mission_id,
       name: item.mission_name,
       description: item.description,
-      joined: false,
+      reserved: false,
     };
     missions.push(fetchedMission);
   });
@@ -53,7 +53,7 @@ const missions = (state = initialState, action) => {
             return (
               {
                 ...mission,
-                joined: !mission.joined,
+                reserved: !mission.reserved,
               }
             );
           }
