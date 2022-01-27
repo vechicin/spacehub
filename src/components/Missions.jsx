@@ -15,10 +15,28 @@ const Missions = () => {
     return text;
   };
 
+  const buttonColor = (reservation) => {
+    let text = 'btn btn-success btn-sm';
+    if (reservation === true) {
+      text = 'btn btn-danger btn-sm';
+      return text;
+    }
+    return text;
+  };
+
+  const badgeColor = (reservation) => {
+    let text = 'badge bg-danger';
+    if (reservation === true) {
+      text = 'badge bg-success';
+      return text;
+    }
+    return text;
+  };
+
   const statusText = (reservation) => {
     let text = 'NOT A MEMBER';
     if (reservation === true) {
-      text = 'Active Member';
+      text = 'ACTIVE MEMBER';
       return text;
     }
     return text;
@@ -43,17 +61,19 @@ const Missions = () => {
             <th>Mission</th>
             <th>Description</th>
             <th>Status</th>
-            <th>Join</th>
+            <th className="join-column">Join/Leave</th>
           </tr>
         </thead>
         <tbody>
           {missions.map((mission) => (
             <tr key={mission.id}>
-              <td>{mission.name}</td>
+              <td className="mission-title">{mission.name}</td>
               <td>{mission.description}</td>
-              <td>{statusText(mission.reserved)}</td>
               <td>
-                <button type="button" onClick={eventHandler} id={mission.id}>{buttonText(mission.reserved)}</button>
+                <p className={badgeColor(mission.reserved)}>{statusText(mission.reserved)}</p>
+              </td>
+              <td className="join-container">
+                <button className={buttonColor(mission.reserved)} type="button" onClick={eventHandler} id={mission.id}>{buttonText(mission.reserved)}</button>
               </td>
             </tr>
           ))}

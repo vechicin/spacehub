@@ -42,3 +42,23 @@ a {
 .navbar-container {
   border-bottom: solid 1px #e8e8e8;
 }
+
+.mission-title {
+  font-weight: bold;
+}
+
+td {
+  vertical-align: middle;
+}
+
+.join-column {
+  width: 10%;
+}
+
+.join-container {
+  text-align: center;
+}
+
+.badge {
+  margin-top: 18px;
+}
