@@ -74,3 +74,12 @@ ul {
 .reservation-btn {
   width: 170px;
 }
+
+.page-padding-top {
+  padding-top: 150px;
+}
+
+.container {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
