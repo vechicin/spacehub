@@ -47,7 +47,7 @@ describe('Test Rockets component', () => {
         id={rocketData.id}
         name={rocketData.name}
         description={rocketData.description}
-        image='{rocketData.image}'
+        image="{rocketData.image}"
       />,
     );
     expect(screen.getByTestId('rocket-item-group')).toBeInTheDocument();
