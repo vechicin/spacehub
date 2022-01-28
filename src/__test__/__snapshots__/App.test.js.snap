@@ -1,0 +1,258 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders App component 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="container"
+      >
+        <nav
+          class="navbar navbar-expand-lg navbar-light bg-white fixed-top border-bottom shadow"
+        >
+          <div
+            class="container-fluid ms-5"
+          >
+            <a
+              aria-current="page"
+              class="navbar-brand h1 active"
+              href="/"
+            >
+              <h3
+                class="fw-bold mt-1"
+              >
+                <img
+                  alt="Girl in a jacket"
+                  class="me-2"
+                  height="40"
+                  src="planet.png"
+                  width="40"
+                />
+                Space Travelers' Hub
+              </h3>
+            </a>
+            <button
+              aria-controls="navbarNavAltMarkup"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              class="navbar-toggler"
+              data-bs-target="#navbarNavAltMarkup"
+              data-bs-toggle="collapse"
+              type="button"
+            >
+              <span
+                class="navbar-toggler-icon"
+              />
+            </button>
+            <div
+              class="collapse navbar-collapse mb-2 me-auto"
+              id="navbarNavAltMarkup"
+            >
+              <ul
+                class="navbar-nav ms-auto text-light me-3"
+              >
+                <li
+                  class="nav-link me-3"
+                >
+                  <a
+                    activeclassname="active-link"
+                    aria-current="page"
+                    class="active"
+                    exact="/"
+                    href="/"
+                  >
+                    Rockets
+                  </a>
+                </li>
+                <li
+                  class="nav-link me-3"
+                >
+                  <a
+                    activeclassname="active-link"
+                    class=""
+                    exact="/missions"
+                    href="/missions"
+                  >
+                    Missions
+                  </a>
+                </li>
+                <li
+                  class="nav-link me-3"
+                >
+                  <a
+                    activeclassname="active-link"
+                    class=""
+                    exact="/my-profile"
+                    href="/my-profile"
+                  >
+                    My Profile
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div
+          class="page-padding-top"
+        >
+          <ul
+            class="p-5"
+            data-testid="rocket-list-test"
+          />
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="container"
+    >
+      <nav
+        class="navbar navbar-expand-lg navbar-light bg-white fixed-top border-bottom shadow"
+      >
+        <div
+          class="container-fluid ms-5"
+        >
+          <a
+            aria-current="page"
+            class="navbar-brand h1 active"
+            href="/"
+          >
+            <h3
+              class="fw-bold mt-1"
+            >
+              <img
+                alt="Girl in a jacket"
+                class="me-2"
+                height="40"
+                src="planet.png"
+                width="40"
+              />
+              Space Travelers' Hub
+            </h3>
+          </a>
+          <button
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            class="navbar-toggler"
+            data-bs-target="#navbarNavAltMarkup"
+            data-bs-toggle="collapse"
+            type="button"
+          >
+            <span
+              class="navbar-toggler-icon"
+            />
+          </button>
+          <div
+            class="collapse navbar-collapse mb-2 me-auto"
+            id="navbarNavAltMarkup"
+          >
+            <ul
+              class="navbar-nav ms-auto text-light me-3"
+            >
+              <li
+                class="nav-link me-3"
+              >
+                <a
+                  activeclassname="active-link"
+                  aria-current="page"
+                  class="active"
+                  exact="/"
+                  href="/"
+                >
+                  Rockets
+                </a>
+              </li>
+              <li
+                class="nav-link me-3"
+              >
+                <a
+                  activeclassname="active-link"
+                  class=""
+                  exact="/missions"
+                  href="/missions"
+                >
+                  Missions
+                </a>
+              </li>
+              <li
+                class="nav-link me-3"
+              >
+                <a
+                  activeclassname="active-link"
+                  class=""
+                  exact="/my-profile"
+                  href="/my-profile"
+                >
+                  My Profile
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div
+        class="page-padding-top"
+      >
+        <ul
+          class="p-5"
+          data-testid="rocket-list-test"
+        />
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
