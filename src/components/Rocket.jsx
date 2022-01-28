@@ -36,12 +36,13 @@ Rocket.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
+  image: PropTypes.string,
   reserved: PropTypes.bool,
 };
 
 Rocket.defaultProps = {
   reserved: false,
+  image: '',
 };
 
 export default Rocket;
