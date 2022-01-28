@@ -14,8 +14,8 @@ const Rockets = () => {
   }, []);
 
   return (
-    <div>
-      <ul>
+    <div className="page-padding-top">
+      <ul className="p-5" data-testid="rocket-list-test">
         {rockets.map((rocket) => (
           <li key={rocket.id}>
             <Rocket
