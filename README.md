@@ -2,11 +2,11 @@
 
 # Space Traveler's Hub
 
-> This is an application built to track the books you are reading and the progress you have made for each book!
+> This is an application built to book missions and rockets from SpaceX
 
 ![screenshot](./screenshot.png)
 
-Additional description about the project and its features.
+You can both join and leave missions, reserve and cancel reservations for SpaceX rockets, see the reservations you've made in your profile and read brief descriptions about the available missions and rockets.
 
 ## Built With
 
