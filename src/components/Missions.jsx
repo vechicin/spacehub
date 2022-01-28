@@ -54,7 +54,7 @@ const Missions = () => {
   }, []);
 
   return (
-    <div>
+    <div className="page-padding-top">
       <table className="table table-striped table-bordered table-dark">
         <thead>
           <tr>
