@@ -17,6 +17,9 @@ You can both join and leave missions, reserve and cancel reservations for SpaceX
 - JavaScript, HTML, CSS
 - React/Redux
 
+## Live Demo 🔍
+To see this project's live demo click [here](https://agile-wave-13190.herokuapp.com/)
+
 ## Running Project Locally 
 
 To run the project locally make sure you run this command on your terminal
